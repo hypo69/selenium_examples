@@ -140,13 +140,15 @@
     ```bash
     pip install selenium
     ```
+~~2.  **Установите WebDriver:**~~  
 
-~~2.  **Установите WebDriver:**~~
+~~*   WebDriver - это драйвер браузера, который позволяет Selenium управлять браузером.~~  
 
-    ~~*   WebDriver - это драйвер браузера, который позволяет Selenium управлять браузером.~~
-    ~~*   Скачайте WebDriver для вашего браузера (Chrome, Firefox и т.д.) с официального сайта и поместите его в PATH.~~
-    ~~*   **Chrome:** [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)~~
-    ~~*   **Firefox:** [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases)~~
+~~*   Скачайте WebDriver для вашего браузера (Chrome, Firefox и т.д.) с официального сайта и поместите его в PATH.~~  
+
+~~*   **Chrome:** [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)~~  
+
+~~*   **Firefox:** [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases)~~  
 
 ### Поиск элементов
 
