@@ -663,3 +663,8 @@ finally:
 
 Задание здесь 👉 [https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/](https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/README.MD)
 
+
+## обработка selenium with xpath, css selector, id, name, class name, link text, partial link text находится здесь 👉 [https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/](https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/README.MD)
+
+Удачи! 🚀
+
