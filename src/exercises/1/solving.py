@@ -1,157 +1,288 @@
 from selenium import webdriver
+from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from typing import List, Tuple, Optional
 
-def get_main_heading_text(driver):
-    """Получает текст заголовка h1."""
+def get_main_heading_text(driver: WebDriver) -> Optional[str]:
+    """
+    Получает текст заголовка h1.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Текст заголовка h1, или None, если заголовок не найден или произошла ошибка.
+    """
     try:
-        element = driver.find_element(By.ID, "mainHeading")
+        element: WebElement = driver.find_element(By.ID, "mainHeading")
         return element.text
-    except:
+    except Exception:
         return None
 
-def get_nav_links(driver):
-    """Получает URL и текст ссылок из блока nav."""
+def get_nav_links(driver: WebDriver) -> List[Tuple[str, str]]:
+    """
+    Получает URL и текст ссылок из блока nav.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Список кортежей, содержащих URL и текст каждой ссылки в блоке nav.
+        Возвращает пустой список, если блок nav не найден или произошла ошибка.
+    """
     try:
-        links = driver.find_elements(By.CSS_SELECTOR, "nav a")
+        links: List[WebElement] = driver.find_elements(By.CSS_SELECTOR, "nav a")
         return [(link.get_attribute("href"), link.text) for link in links]
-    except:
+    except Exception:
         return []
 
-def get_first_paragraph_text(driver):
-    """Получает текст первого параграфа."""
+def get_first_paragraph_text(driver: WebDriver) -> Optional[str]:
+    """
+    Получает текст первого параграфа.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Текст первого параграфа, или None, если параграф не найден или произошла ошибка.
+    """
     try:
-        element = driver.find_element(By.ID, "firstParagraph")
+        element: WebElement = driver.find_element(By.ID, "firstParagraph")
         return element.text
-    except:
+    except Exception:
         return None
 
-def get_first_paragraph_link_url(driver):
-    """Получает URL ссылки внутри первого параграфа."""
+def get_first_paragraph_link_url(driver: WebDriver) -> Optional[str]:
+    """
+    Получает URL ссылки внутри первого параграфа.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        URL ссылки внутри первого параграфа, или None, если ссылка не найдена или произошла ошибка.
+    """
     try:
-        link = driver.find_element(By.CSS_SELECTOR, "#firstParagraph a")
+        link: WebElement = driver.find_element(By.CSS_SELECTOR, "#firstParagraph a")
         return link.get_attribute("href")
-    except:
+    except Exception:
         return None
 
-def get_name_input_value(driver):
-    """Получает значение поля ввода имени."""
+def get_name_input_value(driver: WebDriver) -> Optional[str]:
+    """
+    Получает значение поля ввода имени.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Значение поля ввода имени, или None, если поле не найдено или произошла ошибка.
+    """
     try:
-        element = driver.find_element(By.ID, "name")
+        element: WebElement = driver.find_element(By.ID, "name")
         return element.get_attribute("value")
-    except:
+    except Exception:
         return None
 
-def get_email_input_placeholder(driver):
-    """Получает placeholder поля ввода email."""
+def get_email_input_placeholder(driver: WebDriver) -> Optional[str]:
+    """
+    Получает placeholder поля ввода email.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Placeholder поля ввода email, или None, если поле не найдено или произошла ошибка.
+    """
     try:
-        element = driver.find_element(By.ID, "email")
+        element: WebElement = driver.find_element(By.ID, "email")
         return element.get_attribute("placeholder")
-    except:
+    except Exception:
         return None
 
-def get_selected_gender(driver):
-    """Определяет выбранный пол (male или female)."""
+def get_selected_gender(driver: WebDriver) -> Optional[str]:
+    """
+    Определяет выбранный пол (male или female).
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Строку "male" или "female", в зависимости от выбранного пола, или None,
+        если ни один из вариантов не выбран или произошла ошибка.
+    """
     try:
-        male_radio = driver.find_element(By.ID, "male")
+        male_radio: WebElement = driver.find_element(By.ID, "male")
         if male_radio.is_selected():
             return "male"
-        female_radio = driver.find_element(By.ID, "female")
+        female_radio: WebElement = driver.find_element(By.ID, "female")
         if female_radio.is_selected():
             return "female"
         return None
-    except:
+    except Exception:
         return None
 
-def get_selected_country(driver):
-    """Получает значение выбранной страны из выпадающего списка."""
+def get_selected_country(driver: WebDriver) -> Optional[str]:
+    """
+    Получает значение выбранной страны из выпадающего списка.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Значение выбранной страны, или None, если выпадающий список не найден или произошла ошибка.
+    """
     try:
-        select_element = driver.find_element(By.ID, "country")
-        select = Select(select_element)
+        select_element: WebElement = driver.find_element(By.ID, "country")
+        select: Select = Select(select_element)
         return select.first_selected_option.get_attribute("value")
-    except:
+    except Exception:
         return None
 
-def get_comments_textarea_value(driver):
-    """Получает значение поля textarea для комментариев."""
+def get_comments_textarea_value(driver: WebDriver) -> Optional[str]:
+    """
+    Получает значение поля textarea для комментариев.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Значение поля textarea для комментариев, или None, если поле не найдено или произошла ошибка.
+    """
     try:
-        element = driver.find_element(By.ID, "comments")
+        element: WebElement = driver.find_element(By.ID, "comments")
         return element.text
-    except:
+    except Exception:
         return None
 
-def is_agree_checkbox_checked(driver):
-    """Проверяет, выбран ли чекбокс "Я согласен с условиями"."""
+def is_agree_checkbox_checked(driver: WebDriver) -> bool:
+    """
+    Проверяет, выбран ли чекбокс "Я согласен с условиями".
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        True, если чекбокс выбран, и False в противном случае, или если произошла ошибка.
+    """
     try:
-        checkbox = driver.find_element(By.ID, "agree")
+        checkbox: WebElement = driver.find_element(By.ID, "agree")
         return checkbox.is_selected()
-    except:
+    except Exception:
         return False
 
-def get_submit_button_text(driver):
-    """Получает текст кнопки отправки."""
+def get_submit_button_text(driver: WebDriver) -> Optional[str]:
+    """
+    Получает текст кнопки отправки.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Текст кнопки отправки, или None, если кнопка не найдена или произошла ошибка.
+    """
     try:
-        button = driver.find_element(By.ID, "submitButton")
+        button: WebElement = driver.find_element(By.ID, "submitButton")
         return button.text
-    except:
+    except Exception:
         return None
 
-def get_js_button_text(driver):
-    """Получает текст кнопки, вызывающей JavaScript alert."""
+def get_js_button_text(driver: WebDriver) -> Optional[str]:
+    """
+    Получает текст кнопки, вызывающей JavaScript alert.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Текст кнопки, вызывающей JavaScript alert, или None, если кнопка не найдена или произошла ошибка.
+    """
     try:
-        button = driver.find_element(By.CSS_SELECTOR, "button[onclick]")
+        button: WebElement = driver.find_element(By.CSS_SELECTOR, "button[onclick]")
         return button.text
-    except:
+    except Exception:
         return None
 
-def get_list_items_text(driver):
-    """Получает текст всех элементов списка."""
+def get_list_items_text(driver: WebDriver) -> List[str]:
+    """
+    Получает текст всех элементов списка.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Список строк, содержащих текст каждого элемента списка.
+        Возвращает пустой список, если список не найден или произошла ошибка.
+    """
     try:
-        items = driver.find_elements(By.CSS_SELECTOR, "#listSection ul li")
+        items: List[WebElement] = driver.find_elements(By.CSS_SELECTOR, "#listSection ul li")
         return [item.text for item in items]
-    except:
+    except Exception:
         return []
 
-def get_ordered_list_first_item_id(driver):
-     """Получает id первого элемента упорядоченного списка."""
-     try:
-          item = driver.find_element(By.ID, "firstItem")
-          return item.get_attribute("id")
-     except:
-          return None
+def get_ordered_list_first_item_id(driver: WebDriver) -> Optional[str]:
+    """
+    Получает id первого элемента упорядоченного списка.
 
-def get_table_data(driver):
-    """Получает данные из таблицы."""
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        id первого элемента упорядоченного списка, или None, если элемент не найден или произошла ошибка.
+    """
     try:
-        table_data = []
-        rows = driver.find_elements(By.CSS_SELECTOR, "#tableSection table tbody tr")
+        item: WebElement = driver.find_element(By.ID, "firstItem")
+        return item.get_attribute("id")
+    except Exception:
+        return None
+
+def get_table_data(driver: WebDriver) -> List[List[str]]:
+    """
+    Получает данные из таблицы.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        Список списков строк, представляющих данные из таблицы.
+        Возвращает пустой список, если таблица не найдена или произошла ошибка.
+    """
+    try:
+        table_data: List[List[str]] = []
+        rows: List[WebElement] = driver.find_elements(By.CSS_SELECTOR, "#tableSection table tbody tr")
         for row in rows:
-            cells = row.find_elements(By.TAG_NAME, "td")
+            cells: List[WebElement] = row.find_elements(By.TAG_NAME, "td")
             table_data.append([cell.text for cell in cells])
         return table_data
-    except:
+    except Exception:
         return []
 
-def is_hidden_element_displayed(driver):
-        """Проверяет, отображается ли скрытый элемент. Возвращает False если не отображается, или элемент не найден."""
-        try:
-            element = driver.find_element(By.ID, "hiddenElement")
-            return element.is_displayed()
-        except:
-            return False #Элемент не отображается или не найден
+def is_hidden_element_displayed(driver: WebDriver) -> bool:
+    """
+    Проверяет, отображается ли скрытый элемент. Возвращает False если не отображается, или элемент не найден.
+
+    Args:
+        driver: Экземпляр веб-драйвера Selenium.
+
+    Returns:
+        True, если скрытый элемент отображается, и False в противном случае, или если элемент не найден.
+    """
+    try:
+        element: WebElement = driver.find_element(By.ID, "hiddenElement")
+        return element.is_displayed()
+    except Exception:
+        return False  # Элемент не отображается или не найден
 
 
 # --- Основной код ---
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 
 # 1. Инициализация драйвера
-driver = webdriver.Chrome()
+driver: WebDriver = webdriver.Chrome()
 
 # 2. Открытие веб-страницы
-url = "https://davidka.net/examples/selenium/example_1.html"
+url: str = "https://davidka.net/examples/selenium/example_1.html"
 driver.get(url)
 
 try:
@@ -159,10 +290,10 @@ try:
     # 3. Вызов функций и вывод результатов
     print("Заголовок страницы:", get_main_heading_text(driver))
 
-    nav_links = get_nav_links(driver)
+    nav_links: List[Tuple[str, str]] = get_nav_links(driver)
     print("Ссылки в навигации:")
-    for url, text in nav_links:
-        print(f"\t- URL: {url}, Текст: {text}")
+    for url_link, text in nav_links:
+        print(f"\t- URL: {url_link}, Текст: {text}")
 
     print("Текст первого параграфа:", get_first_paragraph_text(driver))
     print("URL ссылки в первом параграфе:", get_first_paragraph_link_url(driver))
@@ -175,14 +306,14 @@ try:
     print("Текст кнопки 'Отправить':", get_submit_button_text(driver))
     print("Текст кнопки с JavaScript:", get_js_button_text(driver))
 
-    list_items = get_list_items_text(driver)
+    list_items: List[str] = get_list_items_text(driver)
     print("Элементы списка:")
     for item in list_items:
         print(f"\t- {item}")
 
     print("id первого элемента упорядоченного списка:", get_ordered_list_first_item_id(driver))
 
-    table_data = get_table_data(driver)
+    table_data: List[List[str]] = get_table_data(driver)
     print("Данные таблицы:")
     for row in table_data:
         print(f"\t{row}")
@@ -190,7 +321,7 @@ try:
     print("Скрытый элемент отображается:", is_hidden_element_displayed(driver))
 
 except Exception as e:
-     print(f"Общая ошибка: {e}")
+    print(f"Общая ошибка: {e}")
 
 finally:
     # 4. Закрытие браузера

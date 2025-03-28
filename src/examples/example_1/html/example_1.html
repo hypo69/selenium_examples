@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая тестовая страница Selenium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="mainHeading">Добро пожаловать на тестовую страницу!</h1>
+        <nav>
+            <a href="https://www.example.com" class="navLink">Главная</a> |
+            <a href="#" id="aboutLink" onclick="alert('О нас!')">О нас</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="textSection">
+            <h2>Раздел с текстом</h2>
+            <p id="firstParagraph" class="highlight">Это первый параграф с <a href="#">вложенной ссылкой</a>. </p>
+            <p>Это второй параграф без особых атрибутов.</p>
+        </section>
+
+        <section id="formSection">
+            <h2>Форма для ввода данных</h2>
+            <form id="myForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" value="Имя по умолчанию"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email"><br><br>
+
+                <label>Пол:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Мужской</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Женский</label><br><br>
+
+                <label for="country">Страна:</label>
+                <select id="country" name="country">
+                    <option value="russia">Россия</option>
+                    <option value="usa">США</option>
+                    <option value="germany">Германия</option>
+                </select><br><br>
+
+                <label for="comments">Комментарии:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50">
+Оставьте свой комментарий здесь.
+                </textarea><br><br>
+
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree">Я согласен с условиями</label><br><br>
+
+                <button type="submit" id="submitButton">Отправить</button>
+                <button type="button" onclick="alert('Кнопка нажата!')">Нажми меня!</button>
+                <input type="file" id="fileUpload" name="fileUpload">
+            </form>
+        </section>
+
+        <section id="listSection">
+            <h2>Список элементов</h2>
+            <ul>
+                <li class="listItem">Элемент 1</li>
+                <li class="listItem">Элемент 2</li>
+                <li>Элемент 3</li>
+            </ul>
+            <ol>
+                <li id="firstItem">Первый элемент</li>
+                <li>Второй элемент</li>
+                <li>Третий элемент</li>
+            </ol>
+        </section>
+
+        <section id="tableSection">
+            <h2>Таблица данных</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Возраст</th>
+                        <th>Город</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Иван</td>
+                        <td>30</td>
+                        <td>Москва</td>
+                    </tr>
+                    <tr>
+                        <td>Мария</td>
+                        <td>25</td>
+                        <td>Санкт-Петербург</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div id="hiddenElement" style="display: none;">Этот элемент скрыт.</div>
+    </main>
+
+    <footer>
+        <p>© 2023 Тестовый сайт</p>
+    </footer>
+
+    <script>
+        // Простой JavaScript-код для примера
+        function showAlert() {
+            alert("Кнопка нажата!");
+        }
+    </script>
+
+</body>
+
+</html>

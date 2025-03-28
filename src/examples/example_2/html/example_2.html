@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Второй пример страницы для Selenium (Bootstrap)</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Класс для скрытия элементов */
+
+        /* Добавляем немного отступа между полем и кнопкой */
+        #clearButton {
+            margin-left: 5px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            /* Вертикальное выравнивание */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1>Тестовая страница для Selenium</h1>
+            <nav>
+                <a class="text-white" href="#section1">Раздел 1</a> |
+                <a class="text-white" href="#section2">Раздел 2</a> |
+                <a class="text-white" href="#section3">Раздел 3</a> |
+                <a class="text-white" href="#section4">Раздел 4</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="section1" class="mb-4">
+            <h2>Раздел с полями ввода</h2>
+
+            <div class="form-group">
+                <label for="myInput">Текстовое поле:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="myInput" name="myInput" value="Начальный текст">
+                    <button id="clearButton" class="btn btn-outline-secondary" type="button"
+                        onclick="clearInput()">Очистить</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordInput">Пароль:</label>
+                <input type="password" class="form-control" id="passwordInput" name="passwordInput">
+            </div>
+
+            <div class="form-group">
+                <label for="emailInput">Email:</label>
+                <input type="email" class="form-control" id="emailInput" name="emailInput">
+            </div>
+
+            <div class="form-group">
+                <label for="textareaInput">Текстовая область:</label>
+                <textarea class="form-control" id="textareaInput" name="textareaInput" rows="4"></textarea>
+            </div>
+
+
+        </section>
+
+        <section id="section2" class="mb-4">
+            <h2>Раздел с выпадающим списком и чекбоксами</h2>
+
+            <div class="form-group">
+                <label for="mySelect">Выпадающий список:</label>
+                <select class="form-control" id="mySelect" name="mySelect">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+
+            <p>Выберите варианты:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="checkbox1" value="check1" id="checkbox1">
+                <label class="form-check-label" for="checkbox1">Вариант 1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="checkbox2" value="check2" id="checkbox2">
+                <label class="form-check-label" for="checkbox2">Вариант 2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="checkbox3" value="check3" id="checkbox3">
+                <label class="form-check-label" for="checkbox3">Вариант 3</label>
+            </div>
+        </section>
+
+        <section id="section3" class="mb-4">
+            <h2>Раздел с радиокнопками и кнопкой</h2>
+
+            <p>Выберите вариант:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioGroup" value="radio1" id="radio1">
+                <label class="form-check-label" for="radio1">Вариант 1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioGroup" value="radio2" id="radio2">
+                <label class="form-check-label" for="radio2">Вариант 2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioGroup" value="radio3" id="radio3">
+                <label class="form-check-label" for="radio3">Вариант 3</label>
+            </div>
+
+            <button id="myButton" class="btn btn-success" onclick="showNewElement()">Нажми меня</button>
+
+            <div id="newElement" class="hidden mt-3">
+                <p>Этот элемент появляется после нажатия кнопки!</p>
+            </div>
+        </section>
+
+        <section id="section4" class="mb-4">
+            <h2>Загрузка файла</h2>
+            <div class="form-group">
+                <label for="fileUpload">Загрузить файл:</label>
+                <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
+            </div>
+        </section>
+
+        <section id="scrollTarget">
+            <h2>Прокрутка к элементу</h2>
+            <p>Этот раздел находится внизу страницы. Selenium прокрутит страницу к этому элементу.</p>
+        </section>
+    </main>
+
+    <footer class="bg-light py-3">
+        <div class="container">
+            <p>© 2023 Тестовая страница для Selenium</p>
+        </div>
+    </footer>
+
+    <div id="scrollToMe" style="margin-top: 1000px;">
+        Элемент для прокрутки
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showNewElement() {
+            document.getElementById("newElement").classList.remove("hidden");
+        }
+
+        function clearInput() {
+            document.getElementById("myInput").value = "";
+        }
+
+        function addNewElement() {
+            const newElement = document.createElement('div');
+            newElement.id = 'новыйЭлемент';
+            newElement.textContent = 'Новый элемент, созданный динамически!';
+            document.body.appendChild(newElement);
+        }
+
+        setTimeout(addNewElement, 3000);
+
+        function fillFormWithFakeData() {
+            const myInput = document.getElementById('myInput');
+            const passwordInput = document.getElementById('passwordInput');
+            const emailInput = document.getElementById('emailInput');
+            const textareaInput = document.getElementById('textareaInput');
+
+            const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+
+            myInput.value = "Фейковое имя";
+            passwordInput.value = "FakePassword123!";
+            emailInput.value = "fake.email@example.com";
+            textareaInput.value = loremIpsum;
+        }
+
+        window.onload = fillFormWithFakeData;
+    </script>
+</body>
+
+</html>
