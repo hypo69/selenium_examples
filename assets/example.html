@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Selenium Training Page</title>
+
+    <style>
+        /* Complex CSS for demonstration */
+        #container > div.item:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        #formSection input[type="text"]:focus + span {
+            color: red;
+        }
+
+        table#data-table tr:hover {
+            background-color: #ffffcc;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+    <h1 id="mainHeading">Selenium Training 3 Example</h1>
+
+
+
+    <nav>
+        <ul>
+
+            <li><a href="/home" class="nav-link">Home</a></li>
+
+            <li><a href="/about" class="nav-link">About Us</a></li>
+
+            <li id="contact-link"><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div id="content">
+        <p id="firstParagraph">
+
+            This is the first paragraph with a <a href="https://example.com" title="Example Link">link to example.com</a>.
+
+        </p>
+
+
+
+        <div id="formSection">
+            <form action="/submit" method="post">
+
+                <label for="name">Name:</label>
+
+                <input type="text" id="name" name="name" placeholder="Your Name">
+
+                <span>* Required</span> <br><br>
+
+
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email" placeholder="Your Email">
+
+                <span>* Required</span><br><br>
+
+
+
+                <p>Gender:</p>
+
+                <input type="radio" id="male" name="gender" value="male">
+
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="female">
+
+                <label for="female">Female</label><br><br>
+
+
+
+                <label for="country">Country:</label>
+
+                <select id="country" name="country">
+
+                    <option value="usa">USA</option>
+
+                    <option value="canada">Canada</option>
+
+                    <option value="uk">UK</option>
+
+                </select><br><br>
+
+
+
+                <label for="comments">Comments:</label><br>
+
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+
+
+                <input type="checkbox" id="agree" name="agree">
+
+                <label for="agree">I agree to the terms and conditions</label><br><br>
+
+
+
+                <button type="submit" id="submitButton">Submit Form</button>
+            </form>
+        </div>
+
+
+
+        <div id="listSection">
+            <h2>List Example</h2>
+
+            <ul>
+
+                <li class="list-item">Item 1</li>
+
+                <li class="list-item">Item 2</li>
+
+                <li class="list-item">Item 3</li>
+
+                <li class="list-item">Item 4</li>
+
+                <li class="list-item">Item 5</li>
+            </ul>
+
+
+
+            <ol>
+
+                <li id="firstItem">First Item in Ordered List</li>
+
+                <li>Second Item</li>
+
+                <li>Third Item</li>
+            </ol>
+        </div>
+
+
+
+        <div id="tableSection">
+            <h2>Table Example</h2>
+
+            <table id="data-table">
+                <thead>
+
+                    <tr>
+
+                        <th>Header 1</th>
+
+                        <th>Header 2</th>
+
+                        <th>Header 3</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Row 1, Cell 1</td>
+
+                        <td>Row 1, Cell 2</td>
+
+                        <td>Row 1, Cell 3</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Row 2, Cell 1</td>
+
+                        <td>Row 2, Cell 2</td>
+
+                        <td>Row 2, Cell 3</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Row 3, Cell 1</td>
+
+                        <td>Row 3, Cell 2</td>
+
+                        <td>Row 3, Cell 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div id="hiddenSection" style="display: none;">
+
+            <p id="hiddenElement">This element is hidden.</p>
+        </div>
+
+
+
+        <div id="container">
+
+            <div class="item">Item A</div>
+
+            <div class="item">Item B</div>
+
+            <div class="item">Item C</div>
+        </div>
+
+
+
+        <button onclick="alert('Hello from JavaScript!');">Click Me!</button>
+    </div>
+
+
+
+    <footer>
+        <p>© 2024 Selenium Training</p>
+
+    </footer>
+
+
+
+</body>
+</html>
