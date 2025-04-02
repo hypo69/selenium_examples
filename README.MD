@@ -662,9 +662,10 @@ finally:
 Упражнение для практики: попробуйте написать свой сценарий Selenium для взаимодействия с веб-страницей и элементами на ней.
 
 Задание здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD)
+Решение  здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
 
-
-## обработка selenium with xpath, css selector, id, name, class name, link text, partial link text находится здесь 👉 [https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/](https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/README.MD)
+Примеры:
+- Получение информации о элементах 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb)
 
 Удачи! 🚀
 
