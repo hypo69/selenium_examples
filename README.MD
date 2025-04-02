@@ -670,7 +670,7 @@ finally:
 - Интерактивное взаимодействие 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
 
 ## Далее
-Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD)
+Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md)
 
 
 Удачи! 🚀
