@@ -681,8 +681,8 @@ finally:
 - Интерактивное взаимодействие 👉 [examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
 
 ## Далее
-Шпаргалка по XPATH 👉 [docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md)
-Шпаргалка по основным командам Git 👉 []
+Шпаргалка по XPATH 👉 [docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/git.md)
+Шпаргалка по основным командам Git 👉 [docs/git.md]
 
 
 Удачи! 🚀
