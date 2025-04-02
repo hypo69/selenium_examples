@@ -2,4 +2,4 @@
 
 - Шпаргалка по основным командам `Git` 👉 [docs/git.md](https://github.com/hypo69/selenium_examples/blob/master/docs/git.md)
 
-- Шпаргалка по `jupyter` `notebook` 👉 [docs/git.md](https://github.com/hypo69/selenium_examples/blob/master/docs/jupyter_notebook.ru.md)
+- Шпаргалка по `jupyter` `notebook` 👉 [docs/jupyter_notebook.ru.md](https://github.com/hypo69/selenium_examples/blob/master/docs/jupyter_notebook.ru.md)
