@@ -662,6 +662,7 @@ finally:
 Упражнение для практики: попробуйте написать свой сценарий Selenium для взаимодействия с веб-страницей и элементами на ней.
 
 **Упражнение для практики**: 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD)
+
 Решение  здесь: 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
 
 
