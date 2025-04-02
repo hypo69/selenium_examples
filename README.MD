@@ -661,14 +661,16 @@ finally:
 
 Упражнение для практики: попробуйте написать свой сценарий Selenium для взаимодействия с веб-страницей и элементами на ней.
 
-Задание здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD)
-Решение  здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
+**Упражнение для практики**: 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD)
+Решение  здесь: 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
 
-Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD)
 
-Примеры:
+**Примеры**:
 - Получение информации о элементах 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb)
 - Интерактивное взаимодействие 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
+
+## Далее
+Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD)
 
 
 Удачи! 🚀
