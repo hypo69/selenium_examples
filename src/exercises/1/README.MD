@@ -63,4 +63,4 @@ id первого элемента упорядоченного списка: fi
 Скрытый элемент отображается: False
 ```
 
-Решение здесь: 👉 [src/exercises/1/solution.py](https://github.com/hypo69/selenim_examples/blob/master/src/exercises/1/solving.py)
+Решение здесь: 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
