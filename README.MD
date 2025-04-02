@@ -664,8 +664,12 @@ finally:
 Задание здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/README.MD)
 Решение  здесь 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py](https://github.com/hypo69/selenium_examples/blob/master/src/exercises/1/solving.py)
 
+Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD](https://github.com/hypo69/selenium_examples/blob/master/src/examples/README.MD)
+
 Примеры:
 - Получение информации о элементах 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb)
 - Интерактивное взаимодействие 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
+
+
 Удачи! 🚀
 
