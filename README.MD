@@ -666,11 +666,13 @@ finally:
 
 
 **Примеры**:
-- Получение информации о элементах 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb)
-- Интерактивное взаимодействие 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
+
+- Получение информации о элементах 👉 [examples/example_1/example_1.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_1/example_1.ipynb)
+
+- Интерактивное взаимодействие 👉 [examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
 
 ## Далее
-Шпаргалка по XPATH 👉 [https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md)
+Шпаргалка по XPATH 👉 [docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md)
 
 
 Удачи! 🚀
