@@ -683,9 +683,11 @@ finally:
 [examples/example_2/example_2.ipynb](https://github.com/hypo69/selenium_examples/blob/master/src/examples/example_2/example_2.ipynb)
 
 ## Далее
-- Шпаргалка по XPATH 👉 [docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/xpath.md)
+- Шпаргалка по `XPATH` 👉 [docs/xpath.md](https://github.com/hypo69/selenium_examples/blob/master/docs/xpath.md)
 
-- Шпаргалка по основным командам Git 👉 [docs/git.md](https://github.com/hypo69/selenium_examples/blob/master/src/docs/git.md)
+- Шпаргалка по основным командам `Git` 👉 [docs/git.md](https://github.com/hypo69/selenium_examples/blob/master/docs/git.md)
+
+- Шпаргалка по `jupyter` `notebook` 👉 [docs/git.md](https://github.com/hypo69/selenium_examples/blob/master/docs/jupyter_notebook.ru.md)
 
 
 Удачи! 🚀
