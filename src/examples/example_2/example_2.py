@@ -4,7 +4,6 @@
 Этот модуль содержит функции для автоматизации различных действий на веб-странице,
 включая заполнение форм, выбор элементов, загрузку файлов и прокрутку страницы.
 """
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
