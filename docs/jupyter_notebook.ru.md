@@ -153,3 +153,6 @@ df = spark.read.csv("big_data.csv")
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 ```
+
+Удачи! 🚀
+
