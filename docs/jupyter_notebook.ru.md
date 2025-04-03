@@ -325,5 +325,3 @@ model.compile(optimizer='adam',
 model.fit(x=x_train, y=y_train, epochs=5, validation_data=(x_test, y_test), callbacks=[tensorboard_callback])
 
 # %tensorboard --logdir logs/fit # Раскомментируйте, чтобы запустить TensorBoard в Colab
-```
-
